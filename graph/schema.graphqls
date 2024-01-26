@@ -24,6 +24,6 @@ input newCourse {
 }
 
 type Mutation {
-  createCategory(input: NewCategory!): Category!
-  createCourse(input: NewCourse!): Course!
+  createCategory(input: newCategory!): Category!
+  createCourse(input: newCourse!): Course!
 }
