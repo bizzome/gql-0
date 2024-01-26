@@ -1,0 +1,29 @@
+type Category {
+  id: ID!
+  name: String!
+  description: String
+  courses: [Course!]!
+}
+
+type Course {
+  id: ID!
+  name: String!
+  description: String
+  courses: [Category!]!
+}
+
+input newCategory {
+  name: String!
+  description: String
+}
+
+input newCourse {
+  name: String!
+  description: String
+  categoryId: ID!
+}
+
+type Mutation {
+  createCategory(input: NewCategory!): Category!
+  createCourse(input: NewCourse!): Course!
+}
